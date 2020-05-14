@@ -1,0 +1,23 @@
+.fl-right{
+     float: right;
+}
+.rounded-box{
+    border-radius: 20px;
+}.author-style{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.left{
+    float: left;
+}
+.margin{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.cust-anim{
+ transition: 2s;
+}
+.cust-anim:hover{
+    transform: scale(1.1);
+}

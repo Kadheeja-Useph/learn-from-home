@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+  
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand">BLOCK</a>
+    <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+        </ul>
+    </div>
+</nav>
+
+<!-- This is where content is place-->
+<div class="container">
+    {% for blog in blog %}
+       <div class="card" style=" margin-top:10px">
+        <div class="card-header">
+            <p>{{blog.title}}</p>
+            <div>
+                <img src="{% static '/assets/images/profilepic.jpg'%}" class="author-style left" width="40px">
+                <div class="left margin">Tinkerhub MES</div>
+            </div>
+            
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Title</h5>
+            <p class="card-text">  
+            {{blog.body}}
+            </div>
+        
+    </div> 
+    {% endfor %}
+    
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
